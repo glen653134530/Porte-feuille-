@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta name="description" content="Le King Du Restaurant - L'expérience culinaire ultime. Découvrez nos plats, réservez votre table et vivez un moment unique.">
+<meta name="keywords" content="restaurant, cuisine africaine, réservation, plats délicieux, chef, Cameroun, Douala, Yaoundé">
+<meta name="author" content="Le King Du Restaurant">
+
+  <meta charset="UTF-8">
+  <title>Galerie - Le King Du Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #D4AF37;
+      padding: 2rem;
+      text-align: center;
+      color: #000;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #D4AF37;
+    }
+    h2 {
+      color: #D4AF37;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Menu Hamburger -->
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 10001;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #D4AF37;
+    margin: 5px;
+    transition: 0.4s;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .nav-links li a:hover {
+    color: #D4AF37;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(0,0,0,0.8);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem 0;
+      z-index: 10000;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
+
+<header>
+  <nav>
+    <h1 style="color:#D4AF37;">Le King Du Restaurant</h1>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active');">
+      <div></div><div></div><div></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="reservation.html">Réservation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<video autoplay muted loop id="bg-video" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+  <source src="videos/ma_video.mp4" type="video/mp4">
+</video>
+
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    transition: background-color 0.5s ease;
+  }
+  header, section, footer {
+    backdrop-filter: blur(12px);
+    background-color: rgba(18, 18, 18, 0.6);
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  }
+  h1, h2, h3 {
+    color: #D4AF37;
+    text-shadow: 1px 1px 3px #000;
+  }
+  button:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+  }
+</style>
+
+
+<style>
+  .typewriter {
+    color: #D4AF37;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+      typing 3.5s steps(30, end),
+      blink-caret .75s step-end infinite;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+</style>
+<h2 class="typewriter">Bienvenue chez Le King Du Restaurant</h2>
+
+
+<style>
+  .parallax {
+    background-image: url('img/photo1.jpg');
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<div class="parallax"></div>
+
+
+<style>
+  button, .btn {
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #D4AF37;
+  }
+</style>
+
+
+<style>
+  img:hover {
+    transform: scale(1.03);
+    transition: 0.4s ease-in-out;
+  }
+</style>
+
+
+<style>
+  #loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spinner {
+    border: 8px solid #333;
+    border-top: 8px solid #D4AF37;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+</style>
+<div id="loader"><div class="spinner"></div></div>
+<script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+  });
+</script>
+
+
+<style>
+  .navbar {
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+  }
+  .navbar a {
+    display: block;
+    padding: 1rem;
+    color: #D4AF37;
+    text-decoration: none;
+    text-align: center;
+  }
+  .navbar .menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #D4AF37;
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+    }
+    .navbar.responsive .navbar-links {
+      display: flex;
+    }
+    .navbar .menu-icon {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  <div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a href="menu.html">Menu</a>
+    <a href="apropos.html">À propos</a>
+    <a href="reservation.html">Réservation</a>
+    <a href="galerie.html">Galerie</a>
+  </div>
+</nav>
+<script>
+  function toggleMenu() {
+    var navbar = document.getElementById("navbar");
+    navbar.classList.toggle("responsive");
+  }
+</script>
+
+
+
+
+<div class="container">
+  <h2>Nos moments gourmands</h2>
+  <div class="gallery">
+    
+    <img src="img/photo2.jpg" alt="Plat 2">
+    <img src="img/photo3.jpg" alt="Ambiance 1">
+    <img src="img/photo4.jpg" alt="Ambiance 2">
+    <img src="img/photo5.jpg" alt="Chef au travail">
+    <img src="img/photo6.jpg" alt="Client satisfait">
+    <img src="img/photo7.jpg"alt="Client satisfait">
+    <img src="img/photo8.jpg"alt="Client satisfait">
+  </div>
+</div>
+
+
+<style>
+  .page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9998;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.6s ease-in-out;
+  }
+  .page-transition.fade-out {
+    opacity: 0;
+  }
+</style>
+<div class="page-transition" id="page-transition"></div>
+<script>
+  const transitionEl = document.getElementById('page-transition');
+  window.addEventListener("load", () => {
+    transitionEl.classList.add("fade-out");
+  });
+
+  const links = document.querySelectorAll("a[href]");
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      const url = link.getAttribute("href");
+      if (!url.startsWith("#") && !url.startsWith("javascript")) {
+        e.preventDefault();
+        transitionEl.classList.remove("fade-out");
+        setTimeout(() => {
+          window.location.href = url;
+        }, 600);
+      }
+    });
+  });
+</script>
+
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+<style>
+  #comment-section { margin-top: 2rem; }
+  #comment-list p { background: #222; padding: 1rem; border-radius: 5px; margin-bottom: 0.5rem; }
+</style>
+<div id="comment-section">
+  <h3>Commentaires</h3>
+  <textarea id="comment-input" placeholder="Laissez un commentaire..."></textarea>
+  <button onclick="addComment()">Envoyer</button>
+  <div id="comment-list"></div>
+</div>
+<script>
+  function addComment() {
+    const input = document.getElementById("comment-input");
+    if (input.value.length < 2) return;
+    const list = document.getElementById("comment-list");
+    const p = document.createElement("p");
+    p.textContent = input.value;
+    list.appendChild(p);
+    input.value = '';
+  }
+</script>
+
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .whatsapp-float:hover {
+    background-color: #1ebe5d;
+  }
+</style>
+<a href="https://wa.me/237653134530" class="whatsapp-float" target="_blank" title="Contactez-nous sur WhatsApp">
+  🟢
+</a>
+
+
+
+
+</body>
+</html>
